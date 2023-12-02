@@ -2,7 +2,7 @@
 
 # 1) Top continent in youtube : uploads, views , earnings, subsribers
 
-/*select 
+select 
 #Country,
 case
      when Country in ("Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic",
@@ -46,9 +46,9 @@ count(Youtuber) as num_of_youtubers
  group by(continents)
  order by 4 desc
  
-*/
+
  # 2) Percentage of pay per continent
- /*
+ 
  With pct_pay as (
  select 
  #Country,
@@ -102,11 +102,11 @@ round(1.0 * sum(case when continents = 'Europe' then total_earnings else 0 end)/
 round(1.0 * sum(case when continents = 'South_America' then total_earnings else 0 end)/ nullif(sum(total_earnings),0) *100,2) as pct_earnings_South_America,
 round(1.0 * sum(case when continents = 'Australia_and_Oceania' then total_earnings else 0 end)/ nullif(sum(total_earnings),0) *100,2) as pct_earnings_Australia_and_Oceania
  from pct_pay
- */
+ 
  
  # 3) Top 8 Countries percentage pay
  
- /*With country_pct as (
+ With country_pct as (
  select 
  
  Country,
@@ -129,7 +129,7 @@ round( sum(case when Country="Pakistan" then total_earnings else 0 end) / nullif
 round( sum(case when Country="Argentina" then total_earnings else 0 end) / nullif(sum(total_earnings),0) *100 ,2)  as per_Argentina,
 round( sum(case when Country="Russia" then total_earnings else 0 end) / nullif(sum(total_earnings),0) *100 ,2)  as per_Russia
  from country_pct
- */
+ 
  
  # 4) Top 8 channel types : sum of views
  
