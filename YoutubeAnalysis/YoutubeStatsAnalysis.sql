@@ -3,7 +3,7 @@
 # 1) Top continent in youtube : uploads, views , earnings, subsribers
 
 select 
-#Country,
+Country,
 case
      when Country in ("Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic",
           "Chad","Comoros","Congo, Dem. Rep", "Congo, Rep.","Cote d'Ivoire","Djibouti","Egypt","Equatorial Guinea","Eritrea",
@@ -51,7 +51,7 @@ count(Youtuber) as num_of_youtubers
  
  With pct_pay as (
  select 
- #Country,
+ Country,
  case 
      when Country in ("Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic",
           "Chad","Comoros","Congo, Dem. Rep", "Congo, Rep.","Cote d'Ivoire","Djibouti","Egypt","Equatorial Guinea","Eritrea",
